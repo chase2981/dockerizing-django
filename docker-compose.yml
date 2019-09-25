@@ -42,6 +42,8 @@ services:
       - "6379:6379"
     volumes:
       - redisdata:/data
+    # depends_on: 
+    #   - postgres
 
 volumes:
   web-django:
