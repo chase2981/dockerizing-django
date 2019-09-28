@@ -32,9 +32,15 @@ services:
   postgres:
     container_name: psql-django
     restart: always
-    image: postgres:latest
+    # image: postgres:latest
+    build:
+      context: ./postgres
     ports:
       - "5432:5432"
+    environment: 
+      POSTGRES_USER: digitalocean
+      POSTGRES_DB: digitalocean
+      POSTGRES_PASSWORD: 'test1234'
     volumes:
       - pgdata:/var/lib/postgresql/data/
 

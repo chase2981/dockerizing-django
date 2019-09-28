@@ -89,7 +89,8 @@ DATABASES = {
         'NAME': 'digitalocean',
         'USER': 'digitalocean',
         'PASSWORD': 'test1234',
-        'HOST': 'localhost',
+        # 'HOST': 'localhost',
+        'HOST': 'postgres',
         'PORT': '5432'
     }
 }
